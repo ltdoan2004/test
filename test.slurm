@@ -14,7 +14,7 @@
 module load cuda/10.1
 
 # Then load the PyTorch module
-module load pytorch/0.3.1
+module spider pytorch/0.3.1
 
 # Check if the modules are loaded correctly
 module list
