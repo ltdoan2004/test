@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=training
-#SBATCH --output=result_%j.out
-#SBATCH --error=error_%j.err
+#SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
-#SBATCH --time=01:00:00
-#SBATCH --mem=4G
+#SBATCH --mem=8G
+#SBATCH --partition=batch  
+#SBATCH --time=02:00:00
+#SBATCH --output=pytorch_job_%j.out
+#SBATCH --error=pytorch_job_%j.err
 
 module load python/3.8
 module load pytorch/1.8.0
