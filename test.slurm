@@ -25,8 +25,8 @@ which python3
 which venv
 
 # Create and activate the virtual environment
-python3 -m venv ~/test1
-source ~/test1/bin/activate
+python3 -m venv ~/test
+source ~/test/bin/activate
 
 # Now that the virtual environment is activated, pip should be available
 which pip
