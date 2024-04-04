@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=training
 
+#SBATCH --nodes=1
 #SBATCH --ntasks=10
-$SBATCH --nodes=1
 #SBATCH --ntasks-per-node=10
 #SBATCH --partition=standard
 #SBATCH --time=01:00:00
