@@ -14,8 +14,8 @@
 module load python3  # Use 'module avail' to find the correct version
 
 # Create and activate the virtual environment
-python -m venv ~/test1
-source ~/test1/bin/activate
+python -m venv ~/test
+source ~/test/bin/activate
 
 # Make sure pip is available
 which pip
