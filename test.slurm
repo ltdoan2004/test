@@ -9,16 +9,18 @@
 #SBATCH --output=pytorch_job_%j.out
 #SBATCH --error=pytorch_job_%j.err
 
-# Search for the available Python and PyTorch modules and store the names
-PYTHON_MODULE=$(module spider python 2>&1 | grep "python/" | head -1 | awk '{print $2}')
-PYTORCH_MODULE=$(module spider pytorch 2>&1 | grep "pytorch/" | head -1 | awk '{print $2}')
+# Load the dependencies first
+# For example, if the spider command indicates you need to load cuda/10.1
+module load cuda/10.1
 
-# Load the Python and PyTorch modules
-module load $PYTHON_MODULE
-module load $PYTORCH_MODULE
+# Then load the PyTorch module
+module load pytorch/0.3.1
 
 # Check if the modules are loaded correctly
 module list
+
+# Activate virtual environment if necessary
+# source myenv/bin/activate
 
 # Run the Python script
 python main.py
