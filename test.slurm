@@ -18,9 +18,9 @@
 # source activate myenv
 
 # Alternatively, you might try loading Python as follows if 'python3' is a correct module name:
-module --ignore-cache load python3
-module load torch 
-module load torchvision
+module --ignore-cache load "python3"
+module --ignore-cache load "torch"
+module --ignore-cache load "torchvision"
 # Make sure the virtual environment tool is available
 
 which python3
