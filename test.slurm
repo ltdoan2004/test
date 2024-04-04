@@ -1,8 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=training
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
+
+#SBATCH --ntasks=10
+$SBATCH --nodes=1
+#SBATCH --ntasks-per-node=10
 #SBATCH --partition=standard
 #SBATCH --time=01:00:00
 #SBATCH --output=training_%j.out
