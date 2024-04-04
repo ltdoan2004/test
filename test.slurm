@@ -12,4 +12,4 @@
 module load python/3.8
 module load pytorch/1.8.0
 
-python train_cifar10.py
+python main.py
