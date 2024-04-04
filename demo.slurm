@@ -2,6 +2,7 @@
 
 #SBATCH --job-name=pytorch_cifar10          # Job name
 #SBATCH --partition=gpu                     # Partition name, if you have a GPU partition
+#SBATCH --nodes=1
 #SBATCH --gres=gpu:1                        # Request one GPU, adjust the number as needed
 #SBATCH --mem=16G                           # Memory total in MB (for all cores)
 #SBATCH --time=02:00:00                     # Time limit hrs:min:sec
