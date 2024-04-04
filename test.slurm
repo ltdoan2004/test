@@ -10,8 +10,8 @@
 #SBATCH --output=training_%j.out
 #SBATCH --error=training_%j.err
 
-module load python/3.8
-module load pytorch/1.8.1
+module --ignore-cache load "python/3.8"
+module --ignore-cache load "pytorch/1.8.1"
 
 # Chạy đoạn script Python
 python main.py
