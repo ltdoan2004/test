@@ -11,7 +11,8 @@
 #SBATCH --output=pytorch_job_%j.out
 #SBATCH --error=pytorch_job_%j.err
 
-module load torch               
-module load torchvision
+module spider torch
+module spider torchvision
+
 
 python main.py                              # Run your Python script
