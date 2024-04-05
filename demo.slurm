@@ -11,6 +11,7 @@
 #SBATCH --error=pytorch_job_%j.err
 
 # Activate the conda environment
+source /home/tvtn1c23/.conda/venvs
 conda create -n demoenv python=3.8
 
 conda init
