@@ -14,6 +14,7 @@
 source /home/tvtn1c23/miniconda3/etc/profile.d/conda.sh
 
 # Activate the conda environment
+conda init
 conda activate test
 
 # Check if PyTorch is already installed; if not, install it
