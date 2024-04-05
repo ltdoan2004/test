@@ -1,22 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=training
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=8G
-#SBATCH --partition=batch  
-#SBATCH --time=02:00:00
-#SBATCH --output=pytorch_job_%j.out
-#SBATCH --error=pytorch_job_%j.err
 
-# Load the Python module
-module load python/3.9.7
+#SBATCH --job-name=parallel_sum_py2   # Job name
+#SBATCH --nodes=1                     # Run all processes on a single node
+#SBATCH --ntasks=1                    # Run a single task		
+#SBATCH --cpus-per-task=4             # Number of CPU cores per task
+#SBATCH --mem=1GB                     # Job memory request
+#SBATCH --time=00:05:00               # Time limit hh:mm:ss
+#SBATCH --output=parallel_sum_%j.log  # Standard output and error log
 
-# Load the PyTorch module
-module load pytorch/0.3.1
+module load python2                   # Load the python2 module, replace with your specific version
 
-# Confirm that the required modules are loaded
-module list
-
-# Execute the Python script
-python main.py
+python parallel_sum.py
