@@ -10,16 +10,14 @@
 #SBATCH --output=pytorch_job_%j.out
 #SBATCH --error=pytorch_job_%j.err
 
+# Load Conda command line interface
+source /home/tvtn1c23/miniconda3/etc/profile.d/conda.sh
+
 # Activate the conda environment
-source /home/tvtn1c23/.conda/venvs
-conda create -n demoenv python=3.8
+conda activate test
 
-conda init
-
-conda activate demoenv
-
-
-# Check if PyTorch is already installed; install if it's not
+# Check if PyTorch is already installed; if not, install it
+# Skip this step if the machine does not have internet access
 python -c "import torch" || conda install pytorch torchvision -c pytorch
 
 # Run the Python script
