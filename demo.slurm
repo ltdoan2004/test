@@ -13,6 +13,7 @@
 
 module load python                         # Load Python module, adjust if using a specific version or virtual environment
 module load cuda/10.2                       # Load CUDA module if necessary, adjust version as needed
-module load pytorch/1.6.0                   # Load PyTorch module, adjust version as necessary
+module load torch                # Load PyTorch module, adjust version as necessary
+module load torchvision
 
 python main.py                              # Run your Python script
