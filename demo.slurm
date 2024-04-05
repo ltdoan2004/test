@@ -12,4 +12,8 @@
 
 source activate test
 
+
+python -c "import torch" || conda install pytorch torchvision -c pytorch
+
+# Run the Python script
 python main.py
