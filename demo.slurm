@@ -11,7 +11,8 @@
 #SBATCH --error=pytorch_job_%j.err
 
 source /home/tvtn1c23/.conda/envs/test
-conda init
+
+
 conda activate test
 
 conda install pytorch torchvision -c pytorch
