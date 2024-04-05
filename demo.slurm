@@ -11,7 +11,7 @@
 #SBATCH --error=pytorch_job_%j.err
 
 # Initialize Conda
-source /home/tvtn1c23/.bashrc
+source /home/test/.bashrc
 # Or, if the above doesn't work, source the conda.sh script directly:
 # source /home/tvtn1c23/miniconda3/etc/profile.d/conda.sh
 # You might need to adjust the path above to match where conda is installed
