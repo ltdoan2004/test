@@ -1,18 +1,16 @@
 #!/bin/bash
 
-#SBATCH --job-name=pytorch_cifar10          # Job name
-#SBATCH --partition=gpu                     # Partition name, if you have a GPU partition
+#SBATCH --job-name=pytorch_job
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:1                        # Request one GPU, adjust the number as needed
-#SBATCH --mem=16G                           # Memory total in MB (for all cores)
-#SBATCH --time=02:00:00                     # Time limit hrs:min:sec
-#SBATCH --output=pytorch_cifar10_%j.log     # Standard output and error log
-#SBATCH --cpus-per-task=4                   # Number of CPU cores per task
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=8G
+#SBATCH --partition=batch  # Adjust as needed
+#SBATCH --time=02:00:00
 #SBATCH --output=pytorch_job_%j.out
 #SBATCH --error=pytorch_job_%j.err
 
-module --ignore-cache load "python/3.6.8"
-module spider pytorch/0.3.1
+source /home/tvtn1c23/.conda/envs/test
+conda activate test
 
-
-python main.py                              # Run your Python script
+python main.py
