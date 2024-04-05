@@ -11,9 +11,9 @@
 #SBATCH --output=pytorch_job_%j.out
 #SBATCH --error=pytorch_job_%j.err
 
-module load python                         # Load Python module, adjust if using a specific version or virtual environment
-module load cuda/10.2                       # Load CUDA module if necessary, adjust version as needed
-module load torch                # Load PyTorch module, adjust version as necessary
+module load python                      
+module load cuda                      
+module load torch               
 module load torchvision
 
 python main.py                              # Run your Python script
