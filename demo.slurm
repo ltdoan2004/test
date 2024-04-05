@@ -10,14 +10,11 @@
 #SBATCH --output=pytorch_job_%j.out
 #SBATCH --error=pytorch_job_%j.err
 
-# Initialize Conda
-source /home/test/.bashrc
-# Or, if the above doesn't work, source the conda.sh script directly:
-# source /home/tvtn1c23/miniconda3/etc/profile.d/conda.sh
-# You might need to adjust the path above to match where conda is installed
-
 # Activate the conda environment
-conda activate test
+conda create -n demoenv python=3.8
+
+conda activate demoenv
+
 
 # Check if PyTorch is already installed; install if it's not
 python -c "import torch" || conda install pytorch torchvision -c pytorch
