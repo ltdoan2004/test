@@ -11,7 +11,8 @@
 #SBATCH --output=pytorch_job_%j.out
 #SBATCH --error=pytorch_job_%j.err
 
-module spider torch
+module load python/3.6.8
+module load pytorch/0.3.1
 module spider torchvision
 
 
