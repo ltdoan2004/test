@@ -8,8 +8,10 @@
 #SBATCH --time=02:00:00                     # Time limit hrs:min:sec
 #SBATCH --output=pytorch_cifar10_%j.log     # Standard output and error log
 #SBATCH --cpus-per-task=4                   # Number of CPU cores per task
+#SBATCH --output=pytorch_job_%j.out
+#SBATCH --error=pytorch_job_%j.err
 
-module load python3                         # Load Python module, adjust if using a specific version or virtual environment
+module load python                         # Load Python module, adjust if using a specific version or virtual environment
 module load cuda/10.2                       # Load CUDA module if necessary, adjust version as needed
 module load pytorch/1.6.0                   # Load PyTorch module, adjust version as necessary
 
