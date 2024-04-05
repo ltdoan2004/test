@@ -10,4 +10,4 @@
 
 module load python2                   # Load the python2 module, replace with your specific version
 
-python parallel_sum.py
+python demo.py
