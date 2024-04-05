@@ -13,6 +13,8 @@
 # Activate the conda environment
 conda create -n demoenv python=3.8
 
+conda init
+
 conda activate demoenv
 
 
